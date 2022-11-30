@@ -1,0 +1,8 @@
+{
+    "secret_key": "abylay",
+    "redis": { 
+        "host" : "redis",
+        "port": 6379
+    }
+}
+

@@ -1,0 +1,26 @@
+<%- include('../partials/verification'); %>
+<%- include('../partials/header'); %>
+<section class="home">
+    <div class="txt">Library Almaty</div>
+<div class="d-flex justify-content-center align-items-center container">
+    <div class="card py-5 px-3">
+        <h5 class="m-0">Mobile Phone verification</h5>
+        <span class="mobile-text">Enter The code we just send on your Mobile Phone
+            <B class="text-danger">+77752076321</B>    
+        </span>
+
+        <div class="d-flex flex-row mt-5">
+            <input type="text"  maxlength="1" name="first1" class="form-control" autofocus="">
+            <input type="text" maxlength="1" name="second2" class="form-control">
+            <input type="text" maxlength="1" name="three3" class="form-control">
+            <input type="text" maxlength="1" name="four4" class="form-control">
+        </div>
+        <button class="btn btn-success mt-3" onclick="verify(event)">Verify</button>
+        <div class="text-center mt-5">
+            <span class="d-block mobile-text">Don`t Receive the code?</span>
+            <span class="font-weight-bold text-danger cursor">Recend code</span>
+        </div>
+    </div>
+</div>
+</section>
+<%- include('../partials/footer'); %>

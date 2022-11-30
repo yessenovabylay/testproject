@@ -1,0 +1,29 @@
+# docker-compose.yml
+
+version: "3.9"
+services:
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '6432:5432'
+    volumes:
+      - addressbook-db:/var/lib/postgresql/data
+
+  addressbook:
+    build: 
+      context: .
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - '5555:5555'
+
+volumes:
+  addressbook-db:
